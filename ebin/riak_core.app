@@ -61,7 +61,7 @@
 
          %% Default ring creation size.  Make sure it is a power of 2,
          %% e.g. 16, 32, 64, 128, 256, 512 etc
-         {ring_creation_size, 64},
+         {ring_creation_size, 256},
 
          %% Default gossip interval (milliseconds)
          {gossip_interval, 60000},
@@ -76,7 +76,7 @@
          %% Default bucket props
          {default_bucket_props, [{n_val,3},
                                  {allow_mult,false},
-                                 {last_write_wins,false},
+                                 {last_write_wins,true},
                                  {precommit, []},
                                  {postcommit, []},
                                  {chash_keyfun, {riak_core_util, chash_std_keyfun}}]},
